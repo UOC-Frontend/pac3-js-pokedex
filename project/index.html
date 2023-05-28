@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAC 3 PokeAPI</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <h1>Pokeapi - JavaScript - PAC3</h1>
+  <h2>Using Pokemon API</h2>
+
+  <section class="info">
+    <button onclick="getFact()">Get One Card</button>
+    <!-- 
+      <div>
+      <span id="likes">0</span> Likes
+    </div>
+    -->
+  </section>
+  <section id="cards" class="cards"></section>
+
+  <template id="template">
+    <article id="" class="card">
+      <img src="" alt="pokemon picture">
+      <h3 class="pokemonName"></h3>
+      <p class="pokemonType"></p>
+      <p class="fact"></p>
+      <!--  
+      <div class="like">
+        <label for="">like</label>
+        <input type="checkbox" id="" onchange="count(this)">
+      </div>
+      -->
+    </article>
+  </template>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/utils.js"></script>
+
+</body>
+
+</html>
