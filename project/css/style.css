@@ -41,3 +41,30 @@ body{
 .info button {
   cursor: pointer;
 }
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  font-size: 1.5rem;
+  
+}
+
+.pokedex{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.controls{
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.controlDark{
+  padding-left: 1rem;
+}
+
+.title{
+  text-align: center;
+}
