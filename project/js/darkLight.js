@@ -1,5 +1,5 @@
 let themeColor = window.localStorage.getItem('tema');
-console.log('color is: ' + themeColor);
+// console.log('color is: ' + themeColor);
 
 const body = document.querySelector('#body');
 

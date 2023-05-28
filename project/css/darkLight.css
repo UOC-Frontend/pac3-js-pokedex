@@ -4,16 +4,20 @@
 }
 
 body.light{
-  --bg-color: #FFF;
+  --bg-color: #efefbb;
+  --bg: linear-gradient(to right, #FCEBDD, #ffffff);
   --text-color: #222;
 }
 
 body.dark{
   --bg-color: #222;
+  --bg: linear-gradient(to right, #171717, #656563);
   --text-color: #eee;
 }
 
 body{
   background-color: var(--bg-color);
+  background: var(--bg);
   color: var(--text-color);
 }
+
