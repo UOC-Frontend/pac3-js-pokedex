@@ -11,7 +11,6 @@
 </head>
 
 <body class="light" id="body">
-
   <div class="title">
     <h1>Pokeapi - JavaScript - PAC3</h1>
     <h2>Using Pokemon API</h2>
@@ -19,7 +18,7 @@
   <header class="topbar">
     <div class="pokedex">Pokedex</div>
     <div class="search">
-      <p>Search</p>
+      <p></p>
     </div>
     <div class="controls">
       <div class="controlDark">
@@ -33,37 +32,31 @@
     </div>
   </header>
 
+  <article class="article-btn">
+    <section class="info">
+      <button onclick="createPokemonCard()">Get One Card</button>
+    </section>
+    <section class="infoPokemons">
+      <button onclick="getTenPokemons()">Get 10 Cards</button>
+    </section>
+  </article>
 
 
-  <section class="info">
-    <button onclick="getFact()">Get One Card</button>
-    <!-- 
-      <div>
-      <span id="likes">0</span> Likes
-    </div>
-    -->
-  </section>
   <section id="cards" class="cards"></section>
 
   <template id="template">
     <article id="" class="card">
       <img src="" alt="pokemon picture">
+      <p class="id"></p>
       <h3 class="pokemonName"></h3>
       <p class="pokemonType"></p>
-      <p class="fact"></p>
-      <!--  
-      <div class="like">
-        <label for="">like</label>
-        <input type="checkbox" id="" onchange="count(this)">
-      </div>
-      -->
+
     </article>
   </template>
 
-  <script src="./js/script.js"></script>
   <script src="./js/utils.js"></script>
   <script src="./js/darkLight.js"></script>
-
+  <script src="./js/getPokemons.js"></script>
 </body>
 
 </html>
