@@ -7,11 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PAC 3 PokeAPI</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/darkLight.css">
 </head>
 
-<body>
-  <h1>Pokeapi - JavaScript - PAC3</h1>
-  <h2>Using Pokemon API</h2>
+<body class="light" id="body">
+
+  <div class="title">
+    <h1>Pokeapi - JavaScript - PAC3</h1>
+    <h2>Using Pokemon API</h2>
+  </div>
+  <header class="topbar">
+    <div class="pokedex">Pokedex</div>
+    <div class="search">
+      <p>Search</p>
+    </div>
+    <div class="controls">
+      <div class="controlDark">
+        <label for="radioDark">Dark</label>
+        <input type="radio" name="theme" id="radioDark" value="dark">
+      </div>
+      <div class="controlLight">
+        <label for="radioLight">Light</label>
+        <input type="radio" name="theme" id="radioLight" value="light" checked>
+      </div>
+    </div>
+  </header>
+
+
 
   <section class="info">
     <button onclick="getFact()">Get One Card</button>
@@ -40,6 +62,7 @@
 
   <script src="./js/script.js"></script>
   <script src="./js/utils.js"></script>
+  <script src="./js/darkLight.js"></script>
 
 </body>
 
