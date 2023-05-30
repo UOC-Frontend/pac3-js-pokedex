@@ -1,14 +1,36 @@
+const pokemonList = [];
+
 async function getTenPokemons() {
-  for (let i = 0; i < 10; i++) {
-    await createPokemonCard();
+  let pokemon = {};
+  for (let i = 0; i < 3; i++) {
+
+    pokemon = await getRandomPokemon();
+    await pokemonList.push(pokemon);
+    await createPokemonCard(pokemon);
   }
 }
 
-async function createPokemonCard() {
+async function printFilter() {
+  let pokemons = await filterByPokemonName();
+  removeAllChild();
 
-  const pokemon = await getPokemon();
-  console.log(pokemon);
+  for (const key in pokemons) {
+    await createPokemonCard(pokemons[key]);
+  }
+}
 
+async function filterByPokemonName() {
+  const textSearch = document.getElementById('search-input').value;
+  return pokemonList.filter(function (pokemon) {
+    return (pokemon.name).toLowerCase().indexOf(textSearch.toLowerCase()) > -1;
+  });
+}
+
+async function createPokemonCard(pokemon) {
+  if (pokemon === undefined) {
+    pokemon = await getRandomPokemon();
+    pokemonList.push(pokemon);
+  }
   const out = document.querySelector('#cards');
   const temp = document.getElementById('template');
   const clonedTemplate = temp.content.cloneNode(true);
@@ -32,28 +54,21 @@ async function createPokemonCard() {
 }
 
 
-async function getPokemons() {
-  let randomNumber = getRandom(1, 1100);
-  console.log(`Random -> ${randomNumber}`);
-
-  // await indica que se espera a que la respuesta esté completa
-  let object = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
-    .then(x => x.json())
-    .then(pokemon => {
-      console.dir("JÉLOU\n" + pokemon);
-    })
+function removeAllChild() {
+  let element = document.getElementById('cards');
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
 }
 
 
-async function getPokemon() {
+async function getRandomPokemon() {
   let pokemon = {}
   let randomNumber = getRandom(1, 1100);
 
   await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
     .then(obj => obj.json())
     .then(pok => {
-      console.dir(pok);
-
       const name = pok.name[0].toUpperCase() + pok.name.slice(1);
       const type = pok.types.map(type => type.type.name)[0];
       const id = pok.id;

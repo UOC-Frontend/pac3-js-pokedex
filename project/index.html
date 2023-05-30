@@ -17,9 +17,12 @@
   </div>
   <header class="topbar">
     <div class="pokedex">Pokedex</div>
-    <div class="search">
-      <p></p>
+
+    <div>
+      <input id='search-input' type='text' name='pokemon' placeholder='ex. pikachu' />
+      <button onclick="printFilter()" class='btn-search'>Search</button>
     </div>
+
     <div class="controls">
       <div class="controlDark">
         <label for="radioDark">Dark</label>
