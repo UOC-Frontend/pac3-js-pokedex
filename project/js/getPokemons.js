@@ -2,7 +2,7 @@ const pokemonList = [];
 
 async function getTenPokemons() {
   let pokemon = {};
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 10; i++) {
 
     pokemon = await getRandomPokemon();
     await pokemonList.push(pokemon);
@@ -67,12 +67,11 @@ function miFunc(e) {
 }
 
 async function showExtraInformation(pokemon) {
-
   const out = document.querySelector('#cards');
-  const temp = document.getElementById('template');
+  const temp = document.getElementById('extraInfoTemplate');
   const clonedTemplate = temp.content.cloneNode(true);
 
-  let article = clonedTemplate.querySelector('.card');
+  let article = clonedTemplate.querySelector('.cardExtend');
   let id = clonedTemplate.querySelector('.id');
   let img = clonedTemplate.querySelector('img');
   let name = clonedTemplate.querySelector('.pokemonName');
