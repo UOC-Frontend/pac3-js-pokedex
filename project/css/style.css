@@ -99,3 +99,121 @@ body{
   margin: 1rem;
   width: 10rem;
 }
+
+.cardExtend {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  max-width: 70%;
+  height: auto;
+  gap: 1rem;
+  box-sizing: border-box;
+  background-image:
+    radial-gradient(
+      #faece3,
+      #EA8C55
+    );
+  border-radius: 10px;
+  box-shadow: 0 0 15px 5px #666;
+}
+
+.cardExtend .pokemon-info-container{
+  
+    
+}
+
+.pokemon-img-container{
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image:
+    radial-gradient(
+      #dfaa89,
+      #e9dfd9
+      #e8b79b
+    );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pokemon-img-container img {
+ max-width: 100%;
+ justify-content: center;
+ align-items: center;
+}
+
+.pokemon-info-container{
+  width: 50%;
+}
+
+.card .id{
+  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #EA8C55;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.cardExtend .id{
+  margin: 0 auto;
+  background-color: #EA8C55;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.cardExtend > section{
+  width: 50%;
+  padding: 10px;;
+}
+
+.pokemon-info-container .pokemonName{
+  font-size:x-large;
+  text-align: center;
+  font-weight:bolder;
+}
+
+.pokemon-info-container .pokemonType{
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.section-info-pokemon{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem;;
+}
+
+.first-info, .second-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.section-info-pokemon > article > div{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+.pokemon-info-container .div-id{
+  align-items: center;
+  justify-content: center;
+}
+
+.card .pokemonName{
+  text-align: center;
+ 
+}
