@@ -114,10 +114,11 @@ function removeAllChild() {
   }
 }
 
-
 async function getRandomPokemon() {
   let pokemon = {}
   let randomNumber = getRandom(1, 1100);
+
+  let imgNumber = addZerosBeforeRandomNumber(randomNumber);
 
   await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
     .then(obj => obj.json())
@@ -128,7 +129,7 @@ async function getRandomPokemon() {
       const id = pok.id;
       const weight = pok.weight;
       const height = pok.height;
-      const url = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${randomNumber}.png`;
+      const url = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${imgNumber}.png`;
       const abilities = pok.abilities
       const stats = pok.stats;
       const sprites = pok.sprites;
