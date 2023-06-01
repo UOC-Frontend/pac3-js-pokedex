@@ -116,7 +116,7 @@ function removeAllChild() {
 
 async function getRandomPokemon() {
   let pokemon = {}
-  let randomNumber = getRandom(1, 1100);
+  let randomNumber = getRandom(1, 1010);
 
   let imgNumber = addZerosBeforeRandomNumber(randomNumber);
 
